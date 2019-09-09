@@ -1,0 +1,15 @@
+«агрузить гит можно тут: http://git-scm.com/downloads
+
+”станавливайте гит с настройками по умолчанию.
+
+√енераци€ пары ssh ключей:
+
+     ssh-keygen -t rsa ЦC Уvitali_shulha@epam.com"
+
+ѕубличный ключ (id_rsa) нужно отправить владельцу репозитори€ дл€ получени€ прав работы. »ли загрузить в настройки профил€ в bitbucket/github/gitlab
+
+Ќастройка имени пользовател€ и емейла:
+
+     git config --global user.name УVitali ShulhaУ
+
+     git config --global user.email Уvitali_Shulha@epam.com"
