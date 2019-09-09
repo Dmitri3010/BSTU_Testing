@@ -1,0 +1,30 @@
+l
+--list
+List all variables set in config file, along with their values.
+
+--type <type>
+git config will ensure that any input or output is valid under the given type constraint(s), and will canonicalize outgoing values in <type>'s canonical form.
+
+Valid <type>'s include:
+
+bool: canonicalize values as either "true" or "false".
+
+int: canonicalize values as simple decimal numbers. An optional suffix of k, m, or g will cause the value to be multiplied by 1024, 1048576, or 1073741824 upon input.
+
+bool-or-int: canonicalize according to either bool or int, as described above.
+
+path: canonicalize by adding a leading ~ to the value of $HOME and ~user to the home directory for the specified user. This specifier has no effect when setting the value (but you can use git config section.variable ~/ from the command line to let your shell do the expansion.)
+
+expiry-date: canonicalize by converting from a fixed or relative date-string to a timestamp. This specifier has no effect when setting the value.
+
+color: When getting a value, canonicalize by converting to an ANSI color escape sequence. When setting a value, a sanity-check is performed to ensure that the given value is canonicalize-able as an ANSI color, but it is written as-is.
+
+--bool
+--int
+--bool-or-int
+--path
+--expiry-date
+Historical options for selecting a type specifier. Prefer instead --type (see above).
+
+--no-type
+Un-sets the previously set type specifier (if one was previously set). This option requests that git config not canonicalize the retrieved variable. --no-type has no effect without --type=<type> or --<type>.
